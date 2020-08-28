@@ -89,44 +89,53 @@
     }
     
     .top-bar{
-        height: 100px;
+        height: 5vw;
         // background-color: #e0e0e0;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        margin: 0 3vw;
         a{
-            margin-left: 30px;
+            font-size: 1.2vw;
+            margin-left: 2.5vw;
+            // margin-left: 30px;
             &:hover{
                 color: #616161;
             }
         }
         a:last-child{
-            margin-right: 50px;
+            // margin-right: 50px;
         }
     }
     
     .inner{
-        height: 80%;
-        margin: 0 50px;
+        height: 85%;
+        margin: 0 3vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        img{
-            display: block;
+        span{
+            display: inline-block;
             width: 50%;
-            border-radius: 0.75rem;
-            box-shadow: 0 0.5rem 1rem #212121 ;
+            height: 68%;
+            border-radius: 0.75vw;
+            box-shadow: 0 0.5vw 1vw #212121 ;
+            // background-image: url(https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture);
+            background-image: url(http://www.dmoe.cc/random.php);
+            background-size: cover;
         }
         .text{
-            display: block;
-            text-align: right;
-            font-size: 48px;
+            display: flex;
+            // text-align: right;
+            align-items: flex-end;
+            font-size: 4vw;
             user-select: none;
-            line-height: 56px;
+            line-height: 6vw;
+            flex-flow: column wrap;
             p{
                 &:last-child{
-                    line-height: 24px;
-                    font-size: 18px;
+                    line-height: 2vw;
+                    font-size: 1vw;
                     color: #bdbdbd;
                 }
             }
