@@ -1,107 +1,188 @@
 @x:8;
 @x2:150;
 
-body{
-    position: relative;
-    width: auto;
-    height: auto;
-}
+@media all and (max-width:1279px){
 
-.imgleft{
-    position: fixed;
-    top: 100px;
-    left: 10%;
-    max-width: 23%;
-    img{
-        overflow: hidden;
-        border-radius: 0.75rem;
-        box-shadow: 0 0.5rem 1rem #212121 ;
-        max-width: 100%;
+    html{
         width: 100%;
-        vertical-align:top;
-    }
-}
-
-.linkinner{
-    height: 80%;
-    margin: 0 50px;
-    display: flex;
-    justify-content: space-between;
-    .airbox{
-        width: 54%;
-        height: 100px;
-    }
-}
-
-.linkbox{
-    max-width: 60%;
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    
-    
-
-    .subtitle{
-        width: 100%;
-        font-size: 50px;
-        color: #212121;
-        margin-bottom: 20px;
-        user-select: none;
     }
 
-
-    .part{
+    body{
         width: 100%;
-        margin-right: 0 50px;
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 30px;
-        &:last-child{
-            margin-bottom: 0px;
-        }
-    }
-
-
-    .linkcard{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
     }
     
-    a{
-        display: flex;
-        width: 40%;
-        height: 9px*@x;
-        padding: 5px 30px;
-        margin-bottom: 20px;
-        background-color: white;
-        box-shadow: 0 1px 5px #bdbdbd;
-        border-radius: 0.5rem;
-        flex-shrink: 0;
-        align-items: center;
-
-        .imgbox{
-            width: 50px;
-            height: 50px;
-            margin-right: 20px;
-            .imginner{
-                height: 100%;
+    .linksinner{
+        margin: 0 5vw;
+        .part{
+            display: flex;
+            justify-content: flex-start;
+            flex-flow: column wrap;
+            margin-bottom: 30px;
+                    
+            &:last-child{
+                margin-bottom: 0px;
             }
-        }
-        .linktext{
-            overflow: hidden;
-            p{
-                line-height: 25px;
+
+            .subtitle{
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+                color: #212121;
                 user-select: none;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                &:last-child{
-                    color: #bdbdbd;
+                -webkit-user-select:none;
+                -moz-user-select:none;
+            }
+            .linkcard{
+                // background-color: yellow;
+                a{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 5px 10px;
+                    box-shadow: 0 1vw 3vw #bdbdbd;
+                    border-radius: 1vw;
+                    margin-bottom: 20px;
+                    .imgbox{
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 15px;
+                        .imginner{
+                            height: 100%;
+                        }
+                    }
+                    .linktext{
+                        overflow: hidden;
+                        p{
+                            font-size: 1rem;
+                            line-height: 30px;
+                            user-select: none;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            &:last-child{
+                                color: #bdbdbd;
+                            }
+                        }
+                    }
                 }
             }
         }
-
     }
+    
 }
+
+@media all and (min-width:1280px){
+    body{
+        position: relative;
+        // width: auto;
+        // height: auto;
+    }
+
+    .linksinner{
+        margin: 0 3vw;
+        .imgleft{
+            position: fixed;
+            left: 8vw;
+            width: 23%;
+            height: 41vw;
+            background-image: url("https://s1.ax1x.com/2020/08/23/d0UDqx.jpg");
+            // background-image: url("../img/1.JPG");
+            background-size: cover;
+            background-repeat: no-repeat;
+            box-shadow: 0 0.5vw 1vw #212121 ;
+            border-radius: 0.75vw;
+        }
+
+        .linkinner{
+            height: 80%;
+            
+            display: flex;
+            justify-content: space-between;
+            .airbox{
+                width: 54%;
+                height: 100px;
+            }
+            .linkbox{
+                max-width: 60%;
+                display: flex;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+            
+                .part{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-right: -2vw;
+                    margin-bottom: 30px;
+                    
+                    &:last-child{
+                        margin-bottom: 0px;
+                    }
+
+                    .subtitle{
+                        width: 100%;
+                        font-size: 3rem;
+                        color: #212121;
+                        margin-bottom: 20px;
+                        user-select: none;
+                        -webkit-user-select:none;
+                        -moz-user-select:none;
+                    }
+
+                    .linkcard{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        a{
+                            display: flex;
+                            width: 250px;
+                            height: 9px*@x;
+                            padding: 5px 30px;
+                            margin-bottom: 20px;
+                            background-color: white;
+                            box-shadow: 0 0.1vw 0.4vw #bdbdbd;
+                            border-radius: 0.5vw;
+                            flex-shrink: 0;
+                            align-items: center;
+                            flex-grow: 1;
+                            margin-right: 2vw;
+                            user-select: none;
+                            -webkit-user-select:none;
+                            -moz-user-select:none;
+                            
+                    
+                            .imgbox{
+                                width: 50px;
+                                height: 50px;
+                                margin-right: 15px;
+                                .imginner{
+                                    height: 100%;
+                                }
+                            }
+                            .linktext{
+                                overflow: hidden;
+                                p{
+                                    line-height: 30px;
+                                    user-select: none;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                    &:last-child{
+                                        color: #bdbdbd;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+    }
+    
+    
+    
+
+    
+    
+}
+
