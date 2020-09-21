@@ -7,25 +7,137 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/about.css">
     <title>关于</title>
+    <script>
+        window.onload = function(){
+            var aboutTitle = document.querySelector(".aboutTitle")
+            aboutTitle.style.marginBottom = "-" + aboutTitle.clientHeight /2 + "px";
+        };
+    </script>
 </head>
 <body>
     <header class="top-bar">
-        <a href="/index.html" class="index">
-            首页
-        </a>
-        <a href="/links/" class="index">
-            链接
-        </a>
-        <a href="/about/" class="about">
-            关于
-        </a>
+        <header class="top-bar-box">
+            <div class="top-bar">
+                <div class="top-bar-left"></div>
+                <div class="top-bar-right">
+                    <a href="/index.html" class="index topBarAfter">首页</a><a href="/links/" class="links topBarAfter">链接</a><a href="/about/" class="about topBarNow">关于</a>
+                </div>
+            </div>
     </header>
-    <div class="innerAbout">
-        <div class="innerAboutbox">
-            <p>这个界面一无所有</p>
-            <p>2020-08-21 17:51:59</p>
+    <div class="aboutTitleBox">
+        <div class="aboutTitle">
+            <p></p>
         </div>
-
     </div>
+    <div class="aboutTimeBox">
+        <div class="aboutTime">
+            <p id="aboutTimeh1">日志</p>
+            <div class="aboutTimeY">
+                <p class="aboutTimeYearP">2020年</p>
+
+                <div class="aboutTimeInner">
+                    <div class="aboutTimeInnerLeft">
+                        <p>09</p>
+                        <p>21</p>
+                    </div>
+                    <div class="aboutTimeInnerRight">
+                        <p>全新网站界面正式上线！</p>
+                    </div>
+                </div>
+
+                <div class="aboutTimeInner">
+                    <div class="aboutTimeInnerLeft">
+                        <p>09</p>
+                        <p>20</p>
+                    </div>
+                    <div class="aboutTimeInnerRight">
+                        <p>完成<a href="/links/">链接</a>，加入 <a href="#aboutTimeh1">日志</a>。</p>
+                    </div>
+                </div>
+                
+                <div class="aboutTimeInner">
+                    <div class="aboutTimeInnerLeft">
+                        <p>09</p>
+                        <p>19</p>
+                    </div>
+                    <div class="aboutTimeInnerRight">
+                        <p>重写<a href="/links/">链接</a>，全新UI动效设计，优化响应式布局，“320px”宽度的设备可以正常浏览本站。</p>
+                    </div>
+                </div>
+
+                <div class="aboutTimeInner">
+                    <div class="aboutTimeInnerLeft">
+                        <p>09</p>
+                        <p>18</p>
+                    </div>
+                    <div class="aboutTimeInnerRight">
+                        <p>重写<a href="/index.html">首页</a>、<a href="/about/">关于</a>。全新响应式布局，全新界面设计。</p>
+                    </div>
+                </div>
+
+                <div class="aboutTimeInner">
+                    <div class="aboutTimeInnerLeft">
+                        <p>09</p>
+                        <p>02</p>
+                    </div>
+                    <div class="aboutTimeInnerRight">
+                        <p>统一字体为 Sans-serif ，部分文字不可选取，<a href="/links/">链接</a>支持移动设备显示。</p>
+                    </div>
+                </div>
+
+                <div class="aboutTimeInner">
+                    <div class="aboutTimeInnerLeft">
+                        <p>08</p>
+                        <p>28</p>
+                    </div>
+                    <div class="aboutTimeInnerRight">
+                        <p>优化<a href="/index.html">首页</a>响应式布局</p>
+                    </div>
+                </div>
+
+                <div class="aboutTimeInner">
+                    <div class="aboutTimeInnerLeft">
+                        <p>08</p>
+                        <p>27</p>
+                    </div>
+                    <div class="aboutTimeInnerRight">
+                        <p>重写CSS，加入响应式布局，<a href="/index.html">首页</a>支持移动设备显示。</p>
+                    </div>
+                </div>
+
+                <div class="aboutTimeInner">
+                    <div class="aboutTimeInnerLeft">
+                        <p>08</p>
+                        <p>24</p>
+                    </div>
+                    <div class="aboutTimeInnerRight">
+                        <p>优化网站标识为中文网站。</p>
+                    </div>
+                </div>
+
+                <div class="aboutTimeInner">
+                    <div class="aboutTimeInnerLeft">
+                        <p>08</p>
+                        <p>23</p>
+                    </div>
+                    <div class="aboutTimeInnerRight">
+                        <p>加入<a href="/links/">链接</a>。</p>
+                    </div>
+                </div>
+
+                <div class="aboutTimeInner">
+                    <div class="aboutTimeInnerLeft">
+                        <p>08</p>
+                        <p>21</p>
+                    </div>
+                    <div class="aboutTimeInnerRight">
+                        <p>你敢信，本站破壳了！加入<a href="/index.html">首页</a>、<a href="/about/">关于</a>。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
