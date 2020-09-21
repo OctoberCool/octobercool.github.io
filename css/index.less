@@ -5,64 +5,101 @@
     font-family: sans-serif !important;
 }
 
-@bianjie:1280px;
+html{
+    width: 100%;
+    height: 100%;
 
-.top-bar-box{
-    background-color: rgba(255, 255, 255, 0.5);
-    display: flex;
-    justify-content: center;
-    .top-bar{
-        width: @bianjie;
-        min-width: 240px;
-        // background-color: yellowgreen;
+    .top-bar-box{
+        background-color: rgba(255, 255, 255, 0.5);
         display: flex;
-        justify-content: space-between;
-        height: 60px;
-        padding: 0px 30px;
-        flex-shrink: 1;
-        .top-bar-right{
-            line-height: 60px;
-            a{
-                margin-left: 30px;
-                font-size: 16px;
+        justify-content: center;
+        .top-bar{
+            width: 1280px;
+            min-width: 240px;
+            // background-color: yellowgreen;
+            display: flex;
+            justify-content: space-between;
+            height: 60px;
+            padding: 0px 30px;
+            flex-shrink: 1;
+            .top-bar-right{
+                line-height: 60px;
+                a{
+                    margin-left: 30px;
+                    font-size: 16px;
+                }
+                .topBarNow{
+                    border-bottom: 2px solid #212121;
+                }
             }
-            .topBarNow{
-                border-bottom: 2px solid #212121;
+        }
+    }
+
+    .background{
+        width: 100%;
+        background: url(https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture) no-repeat center center;
+        background-size: cover;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+    }
+
+    .indexInnerBox{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+}
+
+
+
+@media all and (max-width:767px){
+
+    .indexInnerBox{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        
+        
+        .indexInner{
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0px 30px;
+            // height: 100px;
+            // background-color: salmon;
+            position: absolute;
+            bottom: 25px;
+            .indexInnerText{
+                padding: 10px 30px;
+                background-color: rgba(255, 255, 255, 0.5);
+                border-radius: 9px;
+                p{
+                    &:first-child::after{
+                        content: "这是一个测试显示的语句";
+                    }
+                    &:last-child::after{
+                        content: "如果你可以看见那表示什么都没有发生";
+                    }
+                    font-size: 16px;
+                    line-height: 25px;
+
+                }
             }
         }
     }
 }
 
-html{
-    width: 100%;
-    height: 100%;
-    
-}
-
-.background{
-    width: 100%;
-    background: url(https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture) no-repeat center center;
-    background-size: cover;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-}
-
-// @media all and (max-width:767px){
-// }
-
 @media all and (min-width:768px){
 
-    .indexInnerBox{
-        display: flex;
-        justify-content: center;
-        height: 100%;
+
         .indexInner{
-            width: @bianjie;
+            width: 1280px;
             // height: 1000px;
             padding: 0px 30px;
             .indexInnerText{
-                display: inline-block;
+                display: flex;
+                flex-flow: column nowrap;
                 background-color: rgba(255, 255, 255, 0.5);
                 position: absolute;
                 bottom: 100px;
