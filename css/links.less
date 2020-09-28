@@ -15,6 +15,10 @@
             .linksBlock{
                 display: flex;
                 flex-flow: wrap column;
+                overflow-x: auto;
+                &::-webkit-scrollbar{
+                    display: none; /* Chrome Safari */
+                }
                 // padding-bottom: 48px;
                 .linksBlockTitle{
                     font-size: 48px;
@@ -26,8 +30,9 @@
                 .linksCardBox{
                     display: flex;
                     // justify-content: space-between;
-                    flex-flow: wrap;
+                    flex-flow: nowrap;
                     padding-left: 30px;
+                    flex-shrink: 1;
                     .linksCard{
                         width: 3px*60;
                         height: 4px*60;
