@@ -6,6 +6,33 @@
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/reset.css">
     <title>你好世界</title>
+    <script>
+        window.onload = function(){
+            function tab(date){
+                var oDate = new Date();
+                var nY = oDate.getFullYear();
+                var nM = oDate.getMonth();
+                var nD = oDate.getDate();
+                var newDate = new Date(nY,nM,nD,0,0,0);
+                var date = date.split('-');
+                var lastDate = new Date(date[0],(date[1]-1),date[2],0,0,0);
+                var result = '';
+                if(newDate.getTime() > lastDate.getTime()){
+                    //result = date[0]+'年'+date[1]+'月'+date[2]+'日到今天已经过去了'+ (newDate.getTime()-lastDate.getTime())/86400000 +'天了';
+                    result = '本站已经萌萌哒的运行'+ (newDate.getTime()-lastDate.getTime())/86400000 +'天了';
+                }else{
+                    result = date[0]+'年'+date[1]+'月'+date[2]+'日到今天还有'+ Math.abs(newDate.getTime()-lastDate.getTime())/86400000 +'天了';
+                }
+                return result;
+            }
+
+            var indexInnerText = document.querySelector(".indexInnerText");
+            var span = document.createElement("span");
+            span.innerHTML = tab('2020-08-29');
+            indexInnerText.append(span);
+            
+        };
+    </script>
 </head>
 <body>
     <span  class="background"></span>
@@ -19,10 +46,7 @@
     </header>
     <div class="indexInnerBox">
         <div class="indexInner">
-            <div class="indexInnerText">
-                <p></p>
-                <p></p>
-            </div>
+            <div class="indexInnerText"></div>
         </div>
     </div>
 </body>

@@ -114,18 +114,9 @@ html{
                 position: absolute;
                 bottom: 100px;
                 padding: 10px 30px;
-                // margin-left: 30px;
-                p{
-                    &:first-child::after{
-                        content: "这是一个测试显示的语句";
-                    }
-                    &:last-child::after{
-                        content: "如果你可以看见那表示什么都没有发生";
-                    }
-                    font-size: 16px;
-                    line-height: 25px;
-
-                }
+                user-select: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
             }
         }
     }
