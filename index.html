@@ -18,10 +18,7 @@
                 var lastDate = new Date(date[0],(date[1]-1),date[2],0,0,0);
                 var result = '';
                 if(newDate.getTime() > lastDate.getTime()){
-                    //result = date[0]+'年'+date[1]+'月'+date[2]+'日到今天已经过去了'+ (newDate.getTime()-lastDate.getTime())/86400000 +'天了';
-                    result = '本站已经萌萌哒的运行'+ (newDate.getTime()-lastDate.getTime())/86400000 +'天了';
-                }else{
-                    result = date[0]+'年'+date[1]+'月'+date[2]+'日到今天还有'+ Math.abs(newDate.getTime()-lastDate.getTime())/86400000 +'天';
+                    result = '本站已经萌萌哒的运行'+ (newDate.getTime()-lastDate.getTime())/86400000 +'天';
                 }
                 return result;
             }
