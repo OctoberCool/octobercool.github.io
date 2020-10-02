@@ -8,26 +8,47 @@
     <title>你好世界</title>
     <script>
         window.onload = function(){
-            function tab(date){
-                var oDate = new Date();
-                var nY = oDate.getFullYear();
-                var nM = oDate.getMonth();
-                var nD = oDate.getDate();
-                var newDate = new Date(nY,nM,nD,0,0,0);
-                var date = date.split('-');
-                var lastDate = new Date(date[0],(date[1]-1),date[2],0,0,0);
-                var result = '';
-                if(newDate.getTime() > lastDate.getTime()){
-                    result = '本站已经萌萌哒的运行'+ (newDate.getTime()-lastDate.getTime())/86400000 +'天';
-                }
-                return result;
-            }
 
-            var indexInnerText = document.querySelector(".indexInnerText");
-            var p = document.createElement("p");
-            p.innerHTML = tab('2020-08-29');
-            indexInnerText.append(p);
+            function toDouble(num) {
+                num >= 10 ? num = '' + num : num = '0' + num;
+                return num;
+            }
+            var main = $$('main'),
+            span = $$('main').getElementsByTagName('span')[0];
             
+            function timer(year, month, day, hour, minute, seconds, elem) {
+            var hour = hour || 0,
+                minute = minute || 0,
+                seconds = seconds || 0;
+            var endTime = new Date();
+            
+            endTime.setFullYear(parseInt(year)),
+            endTime.setMonth(parseInt(month) - 1),
+            endTime.setDate(parseInt(day)),
+            endTime.setHours(parseInt(hour)),
+            endTime.setMinutes(parseInt(minute)),
+            endTime.setSeconds(parseInt(seconds));
+            setTime();
+            setInterval(function() {
+                    setTime()
+            }, 1000);
+            function setTime() {
+                var startTime = new Date();
+                var lengthTime = parseInt((startTime.getTime() - endTime.getTime()) / 1000);
+                var lSeconds = parseInt(lengthTime % 60),
+                lMinute = parseInt((lengthTime / 60) % 60),
+                lHour = Math.floor((lengthTime / 3600) % 24),
+                lDay = Math.floor(lengthTime / (24 * 3600));
+                span.innerHTML=lDay+'天'+toDouble(lHour)+'小时'+toDouble(lMinute)+'分钟'+toDouble(lSeconds)+'秒';
+            }
+            
+            }
+            function $$(id) {
+                return document.getElementById(id);
+            }
+            timer(2020, 08, 29, 0, 0, 0, span);
+
+
         };
 
     </script>
@@ -44,7 +65,9 @@
     </header>
     <div class="indexInnerBox">
         <div class="indexInner">
-            <div class="indexInnerText"></div>
+            <div class="indexInnerText">
+                <p id="main">本站已经萌萌哒的运行<span></span></p>
+            </div>
         </div>
     </div>
 </body>
