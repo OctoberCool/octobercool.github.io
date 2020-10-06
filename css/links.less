@@ -1,3 +1,5 @@
+@lineColor:#eeeeee;
+
 .linksInnerBox{
     max-width: 1300px;
     margin: 0 auto;
@@ -6,7 +8,7 @@
         width: calc(100% - 60px);
         height: 1px;
         margin-left: 30px;
-        background-color: #bdbdbd;
+        background-color: @lineColor;
         transition: all 0.5s;
         @media all and (min-width:1340px){
             width: calc(100% - 20px);
@@ -81,7 +83,7 @@
 
                 &:hover{
                     img{
-                        box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.3);
+                        box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.2);
                         transform: translateY(-5px);
                     }
                 }
@@ -126,7 +128,7 @@
                 width: calc(100vw - 120px);
                 max-width: 300px;
                 height: 1px;
-                background-color: #bdbdbd;
+                background-color: @lineColor;
 
                 margin: 0px 15px 0px 60px;
 
